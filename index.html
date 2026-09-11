@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="منصة أمجاد - رحلة في تاريخ العرب، وشعرهم، وعلمائهم، وأمجادهم.">
+    <title>أمجاد | بوابة الحضارة والتراث العربي</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Reem+Kufi:wght@500;700&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-landmark-dome"></i></span>
+                <span class="logo-text">أَمْجَاد</span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link active">الرئيسية</a></li>
+                    <li><a href="#civilization" class="nav-link">الحضارة</a></li>
+                    <li><a href="#poets" class="nav-link">الشعر العربي</a></li>
+                    <li><a href="#scholars" class="nav-link">العلماء</a></li>
+                    <li><a href="#companions" class="nav-link">الصحابة</a></li>
+                    <li><a href="#calligraphy" class="nav-link">الخط العربي</a></li>
+                    <li><a href="#gallery" class="nav-link">المعرض</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="تغيير المظهر">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="hero" class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <div class="hero-badge"><i class="fa-solid fa-scroll"></i>الأصالة والتاريخ</div>
+                <h1 class="hero-title">مِنْ هُنَا بَدَأَتِ الْحِكَايَة...</h1>
+                <p class="hero-subtitle">رحلة خالدة في أعماق تاريخ العرب، تتغنى بشعرهم، وتستكشف علوم علمائهم، وتستعرض أمجاد حضارة أضاءت العالم.</p>
+                <div class="hero-buttons">
+                    <a href="#civilization" class="btn btn-primary">اكتشف تاريخنا <i class="fa-solid fa-arrow-left"></i></a>
+                    <a href="#quote" class="btn btn-secondary">حكمة اليوم</a>
+                </div>
+            </div>
+            <div class="hero-wave"></div>
+        </section>
+
+        <section id="quote" class="quote-section">
+            <div class="container">
+                <div class="quote-card">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-right"></i></div>
+                    <blockquote id="quote-text">"العلماء ورثة الأنبياء، وإن الأنبياء لم يورثوا ديناراً ولا درهماً وإنما ورثوا العلم."</blockquote>
+                    <p id="quote-author" class="quote-author">- حديث شريف -</p>
+                    <button id="next-quote-btn" class="btn btn-outline"><i class="fa-solid fa-rotate"></i> اقتباس آخر</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="civilization" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">محطات خالدة</span>
+                    <h2 class="section-title">الحضارة العربية والإسلامية</h2>
+                    <div class="arabic-divider">✦ ✦ ✦</div>
+                </div>
+
+                <div class="cards-grid">
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=600&q=80" alt="العصر الجاهلي وصحراء العرب" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-tag">الجزيرة العربية</span>
+                            <h3 class="card-title">العصر الجاهلي وصدر الإسلام</h3>
+                            <p class="card-text">بداية تشكل الهوية العربية، بلاغة القول، وظهور الإسلام الذي جمع العرب ونشر الرسالة في آفاق الأرض.</p>
+                            <button class="btn-link open-modal-btn" data-title="العصر الجاهلي وصدر الإسلام" data-content="شهدت الجزيرة العربية في العصر الجاهلي مجتمعاً قبلياً يتميز بفصاحة اللسان وتذوق الشعر. مع ظهور الإسلام، توحدت القبائل تحت راية التوحيد، وتأسست دولة أحدثت تحولاً جذرياً في القيم والأخلاق والعلوم والتاريخ البشري.">اقرأ المزيد <i class="fa-solid fa-chevron-left"></i></button>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=600&q=80" alt="العصر الأموي والعمارة" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-tag">دمشق والفتوحات</span>
+                            <h3 class="card-title">الدولة الأموية</h3>
+                            <p class="card-text">اتساع رقعة الدولة من حدود الصين شرقاً إلى الأندلس غرباً، وتأسيس معالم العمارة الإسلامية والأرشيف الإداري.</p>
+                            <button class="btn-link open-modal-btn" data-title="الدولة الأموية" data-content="اتخذ الأمويون من دمشق عاصمة لهم، وشهدت هذه الفترة توسعاً جغرافياً هائلاً. كما تم تعريب الدواوين، وسك أول عملة إسلامية خالصة، وبناء صروح معمارية خالدة مثل المسجد الأموي بدمشق وقبة الصخرة بالقدس.">اقرأ المزيد <i class="fa-solid fa-chevron-left"></i></button>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1590076175571-4b5459efb08c?auto=format&fit=crop&w=600&q=80" alt="العصر العباسي وبيت الحكمة" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-tag">بغداد والعصر الذهبي</span>
+                            <h3 class="card-title">العصر العباسي الذهبي</h3>
+                            <p class="card-text">ثورة العلم والترجمة، تأسيس بيت الحكمة، وانطلاق العلوم الحديثة في الرياضيات، الطب، الفلك، والفيزياء.</p>
+                            <button class="btn-link open-modal-btn" data-title="العصر العباسي الذهبي" data-content="شهدت بغداد تأسيس بيت الحكمة، مركز الترجمة والبحث العلمي العلمي الأكبر في عصره. توافد العلماء من كل الأجناس، وتم ترجمة الفلسفة والعلوم الإغريقية والهندية، وتطوير العلوم التجريبية كالكيمياء والطب والهندسة.">اقرأ المزيد <i class="fa-solid fa-chevron-left"></i></button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="poets" class="section bg-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">ديوان العرب</span>
+                    <h2 class="section-title">الشعر وشعراء العربية</h2>
+                    <div class="arabic-divider">✦ ✦ ✦</div>
+                </div>
+
+                <div class="filter-wrapper">
+                    <button class="filter-btn active" data-filter="all">الكل</button>
+                    <button class="filter-btn" data-filter="jahili">الجاهلي</button>
+                    <button class="filter-btn" data-filter="abbasi">العباسي</button>
+                    <button class="filter-btn" data-filter="modern">الحديث</button>
+                </div>
+
+                <div class="poets-grid">
+                    <div class="poet-card" data-category="abbasi">
+                        <div class="poet-header">
+                            <div class="poet-avatar"><i class="fa-solid fa-feather-pointed"></i></div>
+                            <div>
+                                <h3>أبو الطيب المتنبي</h3>
+                                <span class="poet-era">العصر العباسي</span>
+                            </div>
+                        </div>
+                        <p class="poet-bio">مالك زمام اللغة وشاعر العرب الأشهر، اتسم شعره بالحكمة والاعتزاز بالنفس ومقارعة الملوك.</p>
+                        <div class="poet-verse">
+                            <p>الخَيْلُ وَاللَّيْلُ وَالبَيْداءُ تَعرِفُني</p>
+                            <p>وَالسَيفُ وَالرُمحُ وَالقِرطاسُ وَالقَلَمُ</p>
+                        </div>
+                    </div>
+
+                    <div class="poet-card" data-category="jahili">
+                        <div class="poet-header">
+                            <div class="poet-avatar"><i class="fa-solid fa-feather-pointed"></i></div>
+                            <div>
+                                <h3>امرؤ القيس</h3>
+                                <span class="poet-era">العصر الجاهلي</span>
+                            </div>
+                        </div>
+                        <p class="poet-bio">أمير شعراء الجاهلية وصاحب أشهر معلقة، عرف بالوصف الدقيق والتصوير الخيالي البديع.</p>
+                        <div class="poet-verse">
+                            <p>قِفا نَبْكِ مِنْ ذِكْرَى حَبِيبٍ وَمَنْزِلِ</p>
+                            <p>بِسِقْطِ اللِّوَى بَيْنَ الدَّخُولِ فَحَوْمَلِ</p>
+                        </div>
+                    </div>
+
+                    <div class="poet-card" data-category="jahili">
+                        <div class="poet-header">
+                            <div class="poet-avatar"><i class="fa-solid fa-feather-pointed"></i></div>
+                            <div>
+                                <h3>عنترة بن شداد</h3>
+                                <span class="poet-era">العصر الجاهلي</span>
+                            </div>
+                        </div>
+                        <p class="poet-bio">فارس العبسيين وشاعر الفروسية والغزل العفيف، يضرب به المثل في الشجاعة وعزة النفس.</p>
+                        <div class="poet-verse">
+                            <p>وَلَقَدْ ذَكَرْتُكِ وَالرِّمَاحُ نَوَاهِلٌ</p>
+                            <p>مِنِّي وَبِيضُ الْهِنْدِ تَقْطُرُ مِنْ دَمِي</p>
+                        </div>
+                    </div>
+
+                    <div class="poet-card" data-category="modern">
+                        <div class="poet-header">
+                            <div class="poet-avatar"><i class="fa-solid fa-feather-pointed"></i></div>
+                            <div>
+                                <h3>أحمد شوقي</h3>
+                                <span class="poet-era">العصر الحديث</span>
+                            </div>
+                        </div>
+                        <p class="poet-bio">أحد أعظم شعراء العربية في العصر الحديث، أُطلق عليه لقب "أمير الشعراء" لمكانته العالية.</p>
+                        <div class="poet-verse">
+                            <p>دَقّاتُ قَلبِ المَرءِ قائِلَةٌ لَهُ</p>
+                            <p>إِنَّ الحَياةَ دَقائِقٌ وَثَواني</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="scholars" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">صناع المجد العلمائي</span>
+                    <h2 class="section-title">علماء أضاءوا العقول</h2>
+                    <div class="arabic-divider">✦ ✦ ✦</div>
+                </div>
+
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="scholar-search" placeholder="ابحث عن عالم أو مجال (مثال: طب، رياضيات، ابن سينا)...">
+                </div>
+
+                <div class="scholars-grid" id="scholars-container">
+                    <div class="scholar-card" data-name="ابن الهيثم" data-field="الفيزياء والبصريات">
+                        <div class="scholar-badge">الفيزياء والبصريات</div>
+                        <h3>الحسن ابن الهيثم</h3>
+                        <p class="scholar-desc">مؤسس علم البصريات الحديث والممهد لاختراع الكاميرا، وواضع قواعد المنهج العلمي التجريبي.</p>
+                        <ul class="scholar-achievements">
+                            <li><i class="fa-solid fa-check"></i> تأليف كتاب "المناظر"</li>
+                            <li><i class="fa-solid fa-check"></i> شرح كيفية الرؤية عبر انعكاس الضوء</li>
+                        </ul>
+                    </div>
+
+                    <div class="scholar-card" data-name="الخوارزمي" data-field="الرياضيات والفلك">
+                        <div class="scholar-badge">الرياضيات والفلك</div>
+                        <h3>محمد بن موسى الخوارزمي</h3>
+                        <p class="scholar-desc">مؤسس علم الجبر، ومبتكر مفهوم الخوارزميات (Algorithms) التي تعتبر أساس برمجيات اليوم.</p>
+                        <ul class="scholar-achievements">
+                            <li><i class="fa-solid fa-check"></i> كتاب "الكتاب المختصر في حساب الجبر والمقابلة"</li>
+                            <li><i class="fa-solid fa-check"></i> ادخال الأرقام الهندية والنفر لجميع أنحاء العالم</li>
+                        </ul>
+                    </div>
+
+                    <div class="scholar-card" data-name="ابن سينا" data-field="الطب والفلسفة">
+                        <div class="scholar-badge">الطب والفلسفة</div>
+                        <h3>أبو علي ابن سينا</h3>
+                        <p class="scholar-desc">أمير الأطباء، أحد أكثر الشخصيات تأثيراً في تاريخ الطب العالمي وظلت كتبه تُدرّس لأقورن.</p>
+                        <ul class="scholar-achievements">
+                            <li><i class="fa-solid fa-check"></i> تأليف موسوعة "القانون في الطب"</li>
+                            <li><i class="fa-solid fa-check"></i> اكتشاف الطبيعة المعدية لبعض الأمراض</li>
+                        </ul>
+                    </div>
+
+                    <div class="scholar-card" data-name="عباس بن فرناس" data-field="الطيران والهندسة">
+                        <div class="scholar-badge">الطيران والهندسة</div>
+                        <h3>عباس بن فرناس</h3>
+                        <p class="scholar-desc">عالم ومخترع موسوعي أندلسي، أول من قام بمحاولة طيران شراعي قائمة على دراسة علمية.</p>
+                        <ul class="scholar-achievements">
+                            <li><i class="fa-solid fa-check"></i> أول محاولة طيران ناجحة في التاريخ</li>
+                            <li><i class="fa-solid fa-check"></i> صناعة الميقاتة (ساعة مائية) والزجاج الشفاف</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="companions" class="section bg-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">قدوة ورجال</span>
+                    <h2 class="section-title">سير الصحابة الكرام</h2>
+                    <div class="arabic-divider">✦ ✦ ✦</div>
+                </div>
+
+                <div class="companions-grid">
+                    <div class="companion-card">
+                        <div class="companion-symbol"><i class="fa-solid fa-star-and-crescent"></i></div>
+                        <h3>أبو بكر الصديق (رضي الله عنه)</h3>
+                        <span class="companion-title">الصديق - أول الخلفاء الراشدين</span>
+                        <p>أول من آمن من الرجال، وصاحب النبي ﷺ في الهجرة، شهد له بالعدل والمواقف الخالدة في تثبيت دعائم الدولة.</p>
+                    </div>
+
+                    <div class="companion-card">
+                        <div class="companion-symbol"><i class="fa-solid fa-scale-balanced"></i></div>
+                        <h3>عمر بن الخطاب (رضي الله عنه)</h3>
+                        <span class="companion-title">الفاروق - ثاني الخلفاء الراشدين</span>
+                        <p>يضرب به المثل في العدل والحزم. تأسست في عهده الدواوين والنظام الإداري والتقويم الهجري.</p>
+                    </div>
+
+                    <div class="companion-card">
+                        <div class="companion-symbol"><i class="fa-solid fa-book-quran"></i></div>
+                        <h3>عثمان بن عفان (رضي الله عنه)</h3>
+                        <span class="companion-title">ذو النورين - ثالث الخلفاء الراشدين</span>
+                        <p>صاحب الجود والحياء، قام بجمع القرآن الكريم في مصحف واحد مُوحد نُشر في مختلف البقاع.</p>
+                    </div>
+
+                    <div class="companion-card">
+                        <div class="companion-symbol"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3>علي بن أبي طالب (رضي الله عنه)</h3>
+                        <span class="companion-title">باب العلم - رابع الخلفاء الراشدين</span>
+                        <p>ابن عم رسول الله ﷺ، اتسم بالبلاغة العظيمة والشجاعة النادرة والعلم الواسع في الفقه والقضاء.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="timeline" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">قصص عبر الزمن</span>
+                    <h2 class="section-title">محطات تاريخية</h2>
+                    <div class="arabic-divider">✦ ✦ ✦</div>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item" data-story="في عام 622 م، هاجر النبي محمد ﷺ مع أصحابه من مكة إلى المدينة المنورة، لتكون هذه الخطوة بداية تأسيس أول دولة إسلامية والتقويم الهجري.">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">622 م</span>
+                            <h3>الهجرة النبوية الشريفة</h3>
+                            <p>انطلاقة النواة الأولى للدولة والمجتمع الإسلامي وتأسيس التقويم الهجري.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-story="تأسست بيت الحكمة في بغداد وازدهرت في عهد المأمون، وتعتبر أكبر مجمع علمي ومكتبة عالمية جمعت علوم الأرض واستقطبت العلماء.">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">830 م</span>
+                            <h3>تأسيس بيت الحكمة ببغداد</h3>
+                            <p>بداية العصر الذهبي للترجمة والعلوم والبحث العلمي العابر للثقافات.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-story="تأسست جامعة القرويين في فاس بالمغرب على يد فاطمة الفهرية، وتُسجَّل في موسوعة جينيس كأول وأقدم جامعة مستمرة في إعطاء الدرجات العلمية بالعالم.">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">859 م</span>
+                            <h3>بناء جامعة القرويين</h3>
+                            <p>تأسيس أقدم جامعة لا تزال تعمل حتى اليوم في العالم بمدينة فاس.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="calligraphy" class="section bg-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">جمال الحرف العربي</span>
+                    <h2 class="section-title">فن الخط العربي</h2>
+                    <div class="arabic-divider">✦ ✦ ✦</div>
+                </div>
+
+                <div class="calligraphy-grid">
+                    <div class="calligraphy-card font-kufi">
+                        <div class="calligraphy-sample">الخط الكوفي</div>
+                        <h3>الخط الكوفي</h3>
+                        <p>من أقدم الخطوط العربية، يمتاز بالهندسة والصلابة والزوايا القائمة، واستخدم قديماً في كتابة المصاحف الأولى والعمائر.</p>
+                    </div>
+
+                    <div class="calligraphy-card font-naskh">
+                        <div class="calligraphy-sample">خط النسخ</div>
+                        <h3>خط النسخ</h3>
+                        <p>يتميز بالوضوح وسهولة القراءة، وسمي بالنسخ لكثرة استخدامه في نسخ الكتب والمصاحف والطباعة الحديثة.</p>
+                    </div>
+
+                    <div class="calligraphy-card font-thuluth">
+                        <div class="calligraphy-sample">خط الثلث</div>
+                        <h3>خط الثلث</h3>
+                        <p>أم الخطوط وأصعبها، يمتاز بالمرونة والجمالية العالية والتركيبات المتداخلة، ويُستخدم في تزيين المساجد والعناوين.</p>
+                    </div>
+
+                    <div class="calligraphy-card font-ruqaa">
+                        <div class="calligraphy-sample">الخط الديواني</div>
+                        <h3>الخط الديواني</h3>
+                        <p>خط ابتكر لكتابة الدواوين والمعاملات الرسمية، يتميز بالانحناءات والجمالية الفنية والتداخل بين حروفه.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">معرض الهوية</span>
+                    <h2 class="section-title">روائع ومعالم تراثية</h2>
+                    <div class="arabic-divider">✦ ✦ ✦</div>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=600&q=80" alt="الصحراء العربية" loading="lazy">
+                        <div class="gallery-overlay"><span>طبيعة الصحراء العربية</span></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=600&q=80" alt="العمارة الإسلامية" loading="lazy">
+                        <div class="gallery-overlay"><span>الزخرفة والعمارة</span></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?auto=format&fit=crop&w=600&q=80" alt="المخطوطات القديمة" loading="lazy">
+                        <div class="gallery-overlay"><span>المخطوطات والكتب</span></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&w=600&q=80" alt="النقوش والزخارف" loading="lazy">
+                        <div class="gallery-overlay"><span>النقوش والخط العربي</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="modal" id="info-modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-modal">&times;</span>
+            <h3 id="modal-title" class="modal-title">عنوان التفاصيل</h3>
+            <div class="arabic-divider">✦ ✦ ✦</div>
+            <p id="modal-body-text" class="modal-text">المحتوى بالتفصيل...</p>
+        </div>
+    </div>
+
+    <button id="back-to-top" class="back-to-top" aria-label="الرجوع للأعلى">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <span class="logo-icon"><i class="fa-solid fa-landmark-dome"></i></span>
+                    <span class="logo-text">أَمْجَاد</span>
+                </a>
+                <p>منصة ثقافية تهتم بنشر وتوثيق أبعاد الحضارة العربية، تراثها، شعرها، وعلومها الخالدة بقالب عصري يناسب الجميع.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="#civilization">الحضارة</a></li>
+                    <li><a href="#poets">الشعر العربي</a></li>
+                    <li><a href="#scholars">العلماء العرب</a></li>
+                    <li><a href="#companions">الصحابة</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h4>تواصل معنا</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Youtube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>جميع الحقوق محفوظة &copy; 2026 موقع أمجاد - منصة التراث والحضارة العربية</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

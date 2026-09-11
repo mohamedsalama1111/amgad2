@@ -1,0 +1,901 @@
+/* ==========================================================================
+   Variables & Theme Config
+   ========================================================================== */
+:root {
+    --bg-primary: #FAF6F0;
+    --bg-secondary: #F3ECE1;
+    --card-bg: #FFFFFF;
+    --text-color: #2C221E;
+    --text-muted: #6B5E57;
+    
+    --primary-color: #8C2D19; /* عناب وأحمر ملكي */
+    --primary-hover: #6B1F0F;
+    --accent-gold: #C59B27;   /* ذهبي عربي */
+    --accent-gold-light: #E5C365;
+    --green-dark: #1E4620;   /* أخضر إسلامي */
+    
+    --border-color: #E2D7C7;
+    --shadow-sm: 0 4px 6px rgba(44, 34, 30, 0.05);
+    --shadow-md: 0 8px 15px rgba(44, 34, 30, 0.08);
+    --shadow-lg: 0 15px 30px rgba(44, 34, 30, 0.12);
+
+    --font-primary: 'Amiri', serif;
+    --font-heading: 'Reem Kufi', sans-serif;
+    --font-ruqaa: 'Aref Ruqaa', serif;
+
+    --transition: all 0.3s ease;
+}
+
+/* Dark Mode Variables */
+[data-theme="dark"] {
+    --bg-primary: #12100E;
+    --bg-secondary: #1A1714;
+    --card-bg: #221E1B;
+    --text-color: #EAE3D9;
+    --text-muted: #A89F91;
+    --border-color: #3A322C;
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 8px 15px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Base Styles & Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-color);
+    font-family: var(--font-primary);
+    line-height: 1.8;
+    transition: var(--transition);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+.bg-alt {
+    background-color: var(--bg-secondary);
+}
+
+/* Section Header Structure */
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-subtitle {
+    color: var(--accent-gold);
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: block;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin: 0.5rem 0;
+}
+
+[data-theme="dark"] .section-title {
+    color: var(--accent-gold-light);
+}
+
+.arabic-divider {
+    color: var(--accent-gold);
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+}
+
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-color: rgba(250, 246, 240, 0.95);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+[data-theme="dark"] .header {
+    background-color: rgba(18, 16, 14, 0.95);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .logo {
+    color: var(--accent-gold);
+}
+
+.logo-icon {
+    color: var(--accent-gold);
+}
+
+.nav-list {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.2rem 0;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-gold);
+    transition: var(--transition);
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.theme-toggle {
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.theme-toggle:hover {
+    color: var(--accent-gold);
+    border-color: var(--accent-gold);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    border-radius: 3px;
+    transition: var(--transition);
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.hero-section {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://i.ytimg.com/vi/a1Rs4gsCCc0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDp0SveuSGzX6wfb61_WLqiK9bhnA') center/cover no-repeat;
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 5rem;
+}
+
+.hero-content {
+    max-width: 800px;
+    z-index: 2;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 0.3rem 1.2rem;
+    background-color: rgba(197, 155, 39, 0.2);
+    border: 1px solid var(--accent-gold);
+    color: var(--accent-gold-light);
+    border-radius: 20px;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    color: #E2D7C7;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 2rem;
+    font-family: var(--font-primary);
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-secondary {
+    background-color: var(--accent-gold);
+    color: #000;
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent-gold-light);
+}
+
+.btn-outline {
+    background: transparent;
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
+}
+
+.btn-outline:hover {
+    background-color: var(--accent-gold);
+    color: #000;
+}
+
+/* Quote Section */
+.quote-section {
+    margin-top: -3rem;
+    position: relative;
+    z-index: 10;
+}
+
+.quote-card {
+    background: var(--card-bg);
+    border: 2px solid var(--accent-gold);
+    border-radius: 8px;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+}
+
+.quote-icon {
+    font-size: 2.5rem;
+    color: var(--accent-gold);
+    margin-bottom: 1rem;
+}
+
+#quote-text {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+    font-family: var(--font-ruqaa);
+}
+
+.quote-author {
+    color: var(--accent-gold);
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+/* ==========================================================================
+   Cards & Layout Components
+   ========================================================================== */
+.cards-grid, .poets-grid, .scholars-grid, .companions-grid, .calligraphy-grid, .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* Cards (Manuscript style) */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent-gold);
+}
+
+.card-img-wrapper {
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-img-wrapper img {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-tag {
+    font-size: 0.85rem;
+    color: var(--accent-gold);
+    font-weight: bold;
+}
+
+.card-title {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    margin: 0.5rem 0;
+}
+
+.card-text {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.btn-link {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    cursor: pointer;
+    font-family: var(--font-primary);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+[data-theme="dark"] .btn-link {
+    color: var(--accent-gold);
+}
+
+/* Filter Controls */
+.filter-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: var(--font-primary);
+    transition: var(--transition);
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background-color: var(--primary-color);
+    color: #FFF;
+    border-color: var(--primary-color);
+}
+
+/* Poet Cards */
+.poet-card {
+    background-color: var(--card-bg);
+    border-right: 4px solid var(--accent-gold);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    border-radius: 4px;
+}
+
+.poet-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.poet-avatar {
+    width: 45px;
+    height: 45px;
+    background-color: var(--bg-secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-gold);
+    font-size: 1.2rem;
+}
+
+.poet-era {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.poet-bio {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.poet-verse {
+    background-color: var(--bg-secondary);
+    padding: 1rem;
+    border-radius: 4px;
+    text-align: center;
+    font-family: var(--font-ruqaa);
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .poet-verse {
+    color: var(--accent-gold-light);
+}
+
+/* Search Box & Scholars */
+.search-box {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto 2.5rem auto;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 0.8rem 2.8rem 0.8rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 25px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    font-family: var(--font-primary);
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: var(--accent-gold);
+}
+
+.search-icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+}
+
+.scholar-card {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    position: relative;
+}
+
+.scholar-badge {
+    display: inline-block;
+    font-size: 0.8rem;
+    background: var(--bg-secondary);
+    color: var(--accent-gold);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.scholar-achievements {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.scholar-achievements li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.scholar-achievements i {
+    color: var(--green-dark);
+}
+
+/* Companions Section */
+.companion-card {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 6px;
+    border-top: 3px solid var(--green-dark);
+    box-shadow: var(--shadow-sm);
+}
+
+.companion-symbol {
+    font-size: 2rem;
+    color: var(--green-dark);
+    margin-bottom: 0.5rem;
+}
+
+.companion-title {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--accent-gold);
+    margin-bottom: 0.8rem;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: var(--accent-gold);
+    top: 0;
+    bottom: 0;
+    right: 50%;
+    margin-right: -1px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.timeline-item:nth-child(odd) {
+    right: 0;
+    text-align: left;
+}
+
+.timeline-item:nth-child(even) {
+    right: 50%;
+    text-align: right;
+}
+
+.timeline-dot {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: -8px;
+    background-color: var(--card-bg);
+    border: 3px solid var(--accent-gold);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+    right: auto;
+    left: -8px;
+}
+
+.timeline-content {
+    padding: 1.5rem;
+    background-color: var(--card-bg);
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: var(--accent-gold);
+}
+
+/* Calligraphy Section */
+.calligraphy-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.calligraphy-sample {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+[data-theme="dark"] .calligraphy-sample {
+    color: var(--accent-gold);
+}
+
+.font-kufi .calligraphy-sample { font-family: var(--font-heading); }
+.font-naskh .calligraphy-sample { font-family: var(--font-primary); }
+.font-thuluth .calligraphy-sample { font-family: var(--font-ruqaa); }
+.font-ruqaa .calligraphy-sample { font-family: var(--font-ruqaa); }
+
+/* Gallery Section */
+.gallery-item {
+    position: relative;
+    height: 220px;
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+/* Modal Popup */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    border: 1px solid var(--accent-gold);
+}
+
+.close-modal {
+    position: absolute;
+    left: 1.5rem;
+    top: 1rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--text-muted);
+}
+
+/* Back to Top */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    background-color: var(--primary-color);
+    color: #FFF;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    z-index: 99;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #1A1714;
+    color: #EAE3D9;
+    padding-top: 4rem;
+    border-top: 3px solid var(--accent-gold);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+    padding-bottom: 3rem;
+}
+
+.footer-brand p {
+    margin-top: 1rem;
+    color: #A89F91;
+    font-size: 0.95rem;
+}
+
+.footer-links h4, .footer-social h4 {
+    font-family: var(--font-heading);
+    color: var(--accent-gold);
+    margin-bottom: 1rem;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a:hover {
+    color: var(--accent-gold);
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    width: 38px;
+    height: 38px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #EAE3D9;
+}
+
+.social-icons a:hover {
+    background-color: var(--accent-gold);
+    color: #000;
+}
+
+.footer-bottom {
+    background-color: #12100E;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+    color: #8C827A;
+}
+
+/* ==========================================================================
+   Responsive Design
+   ========================================================================== */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 100%;
+        background-color: var(--card-bg);
+        padding: 2rem;
+        box-shadow: var(--shadow-md);
+        transition: var(--transition);
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .timeline::after {
+        right: 20px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-right: 50px;
+        padding-left: 10px;
+    }
+
+    .timeline-item:nth-child(even) {
+        right: 0;
+        text-align: left;
+    }
+
+    .timeline-dot, .timeline-item:nth-child(even) .timeline-dot {
+        right: 12px;
+        left: auto;
+    }
+}
